@@ -1,10 +1,15 @@
-Steps Followed :
 
-1. Import atlasmap-mapping-jsontoxml.adm in the UI
 
-2. Run mvn install command and upload .jar from target folder into UI.
+Camel Route -->
 
-3. The Export and Run into the camel code 
+        <route id="transformjsontoxml">
+            <from id="_from3" uri="direct:transformjsontoxml"/>
+            <log id="_log11" message="In Route Block for ROUTE ${routeId} "/>
+            <log id="_log21" message="The In  Body is ${body}"/>
+            <to id="_to11" uri="atlas:classpath:atlasmap-mapping-customtrans.adm"/>
+            <log id="_log31" message="The Out Body is ${body}"/>
+        </route>
+
 
 Error:
 
